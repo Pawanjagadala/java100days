@@ -1,0 +1,36 @@
+package java100days;
+class Student{
+	String name;
+	int rn;
+	Student(String name,int rn)
+	{
+		this.name=name;
+		this.rn=rn;
+		
+	}
+	void showStudent() {
+		System.out.println("name="+name+"rn="+rn);
+	}
+}
+class Marks extends Student{
+	int m1,m2;
+	Marks(String name,int rn,int m1,int m2)
+	{
+		super(name,rn);
+		this.m1=m1;
+		this.m2=m2;
+	}
+	void showMarks() {
+		System.out.println("m1="+m1+"m2="+m2);
+	}
+}
+public class SingleInher {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+Marks mm=new Marks("pawan",24,99,98);
+mm.showStudent();
+mm.showMarks();
+	}
+
+}
