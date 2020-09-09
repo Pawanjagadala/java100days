@@ -1,0 +1,25 @@
+package java100days;
+import java.util.*;
+public class colardtz {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc=new Scanner(System.in);
+		System.out.println("enter the n value");
+		int n=sc.nextInt();
+		while(n!=1) {
+			if(n%2==0)
+			{
+				System.out.println(n+" ");
+				n=n/2;
+			}
+			else if(n%2!=0)
+			{
+				System.out.println(n+" ");
+				n=n*n+1;
+			}
+		}
+		System.out.println(n);
+	}
+
+}
