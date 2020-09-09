@@ -1,0 +1,33 @@
+package java100days;
+import java.util.*;
+public class pronicnumber {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc=new Scanner(System.in);
+		System.out.println("entre the number");
+		int n=sc.nextInt();
+		int prod;
+		int x=0;
+		for(int i=1;i<n;i++)
+		{
+				if(i*(i+1)==n)
+				{
+					
+				x=1;
+				break;
+					
+				}
+			
+		}
+		if(x==1)
+		{
+			System.out.println("this is a pronic number");
+		}
+		else
+		{
+			System.out.println("this is not a pronic number");
+		}
+	}
+
+}
