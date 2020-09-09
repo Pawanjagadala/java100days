@@ -1,0 +1,39 @@
+package java100days;
+import java.util.*;
+public class adamnumber {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc=new Scanner(System.in);
+		System.out.println("enter the number");
+		int n=sc.nextInt();
+		int num=n;
+		int reverse=0;
+		while(num!=0)
+		{
+			int rem=num%10;
+			reverse=reverse*10+rem;
+			num=num/10;
+		}
+		int sq;
+		int revsq;
+		sq=n*n;
+		revsq=reverse*reverse;
+		int revofsq=0;
+		while(sq!=0)
+		{
+			int remn=sq%10;
+			revofsq=revofsq*10+remn;
+			sq=sq/10;
+		}
+		if(revsq==revofsq)
+		{
+			System.out.println("this is an adam number");
+		}
+		else
+		{
+			System.out.println("this is not a adam number");
+		}
+	}
+
+}
