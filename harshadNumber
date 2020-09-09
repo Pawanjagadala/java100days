@@ -1,0 +1,28 @@
+package java100days;
+import java.util.*;
+public class harshadnumber {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc=new Scanner(System.in);
+		System.out.println("enter the number");
+		int n=sc.nextInt();
+		int sum=0;
+		int num=n;
+		while(num>0)
+		{
+			int rem=num%10;
+			sum=sum+rem;
+			num=num/10;
+		}
+		if(n%sum==0)
+		{
+			System.out.println("this is an harshad or niven number");
+		}
+		else
+		{
+			System.out.println("this is not a harshad or niven number");
+		}
+	}
+
+}
