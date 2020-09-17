@@ -1,0 +1,36 @@
+package java100days;
+import java.util.*;
+public class ARMSTRONG {
+	static int digits(int n)
+	{
+		int c=0;
+		while(n>0)
+		{
+			c++;
+			n=n/10;
+		}
+		return c;
+	}
+
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		System.out.println("enter the number:");
+		int n=sc.nextInt();
+		int sum=0;
+		int temp=n;
+		int ptr=digits(n);
+		while(n>0)
+		{
+			int rem=n%10;
+			sum=sum+(int)Math.pow(rem,ptr);
+			n=n/10;
+		}
+		if(temp==sum)
+		{
+			System.out.println("this is an armstrong number");
+		}
+		else
+			System.out.println("this is not  a armstrong number");
+	}
+
+}
