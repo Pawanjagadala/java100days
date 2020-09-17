@@ -1,0 +1,39 @@
+package java100days;
+import java.util.*;
+public class triperfectNumber {
+
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		System.out.println("enter the number");
+		int n=sc.nextInt();
+		int sum=1+n;
+		int i=2;
+		while(i<=n/2)
+		{
+			if(n%i==0)
+			{
+				if(n/i==i)
+				{
+					sum=sum+i;
+				}
+				else
+				{
+					sum=sum+i+i/n;
+				}
+			}
+			i++;
+		}
+		
+		
+		if(sum==n*3)
+		{
+			System.out.println("yes this is a triperfect number");
+		}
+		else
+		{
+			System.out.println("this is not a triperfect number");
+		}
+
+	}
+
+}
