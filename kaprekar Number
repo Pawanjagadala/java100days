@@ -1,0 +1,43 @@
+package java100days;
+import java.util.*;
+public class kaprekarNUamber {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc=new Scanner(System.in);
+		System.out.println("enter a number");
+		int n=sc.nextInt();
+		int sq=n*n;
+		int firstpart=0;
+		int secondpart=0;
+		int count=0;
+		int sum = 0;
+		int temp=sq;
+		while(temp!=0)
+		{
+			count++;
+			temp=temp/10;
+		}
+		for(int i=count-1;i>0;i--)
+		{
+			firstpart=sq/((int)Math.pow(10,i));
+			secondpart=sq%(int)Math.pow(10,i);
+			if(secondpart==0 ||firstpart==0)
+				continue;
+			
+			sum=firstpart+secondpart;
+			if(sum==n)
+			{
+				System.out.println("this is a kaprekar number");
+				break;
+			}
+			
+		}
+		if(sum!=n)
+		{
+			System.out.println("this is not a kaprekar numbr");
+		}
+	}
+	
+
+}
