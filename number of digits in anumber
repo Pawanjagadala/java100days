@@ -1,0 +1,22 @@
+package java100days;
+import java.util.*;
+public class count_digits {
+
+	public static void main(String[] args) {
+		int num;
+		Scanner obj=new Scanner(System.in);
+		System.out.println("enter the n  value");
+		int n=obj.nextInt();
+		int arr[]=new int[10];
+		for(int i=0;i<=n;i++)
+		{
+			arr[i]=obj.nextInt();
+		}
+		String str=Arrays.toString(arr);
+		int len=str.length();
+		System.out.println("number digits int given number is"+len);
+			
+
+	}
+
+}
