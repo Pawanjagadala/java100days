@@ -1,0 +1,45 @@
+package java100days;
+import java.util.*;
+public class canadaNumber {
+	static int sumdigits(int n)
+	{
+		int sumofsq=0;
+
+		while(n>0)
+		{
+			int rem=n%10;
+			sumofsq=sumofsq+(rem*rem);
+			n=n/10;
+			
+		}
+		return sumofsq;
+	}
+	static int factorsum(int n)
+	{
+		int sumf=0;
+		for(int i=2;i<n;i++)
+		{
+			if(n%i==0)
+			{
+				sumf=sumf+i;
+			}
+		}
+		return sumf;
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc=new Scanner(System.in);
+		int n=sc.nextInt();
+		System.out.println("Enter the number");
+		int sum=sumdigits(n);
+		int factor=factorsum(n);
+		if(sum==factor)
+		{
+			System.out.println("canada Number");
+		}
+		else
+			System.out.println("not a canada number");
+	}
+
+}
