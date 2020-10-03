@@ -1,0 +1,38 @@
+package java100days;
+import java.util.*;
+public class happyNumber {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc=new Scanner(System.in);
+		System.out.println("enter the number");
+		int num=sc.nextInt();
+		int result=num;
+
+		while(result!=1 && result!=4)
+		{
+			result=print(result);
+		}
+		if(result==1)
+		{
+			System.out.println(num+ "  this is aa happy number");
+		}
+		else
+		{
+			System.out.println(num+ "  not a happy number");
+		}
+	}
+	static int print(int num)
+	{
+		int sum=0;
+		while(num>0)
+		{
+			int rem=num%10;
+			sum=sum+(rem*rem);
+			num=num/10;
+			
+		}
+		return sum;
+	}
+
+}
