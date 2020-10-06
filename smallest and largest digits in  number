@@ -1,0 +1,27 @@
+package java100days;
+import java.util.*;
+public class smallestandlargest_nymber {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc=new Scanner(System.in);
+		System.out.println("enter the number");
+		int n=sc.nextInt();
+		int small,large,rem;
+		small=large=n%10;
+		while(n>0)
+		{
+			rem=n%10;
+			n=n/10;
+			if(rem>large)
+			{
+				large=rem;
+			}
+			else if(rem<=small)
+				small=rem;
+		}
+		System.out.println("samllest digit is"+small);
+		System.out.println("largest digit is"+large);
+	}
+
+}
