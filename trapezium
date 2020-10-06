@@ -1,0 +1,17 @@
+package java100days;
+import java.util.*;
+public class trapezium {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc=new Scanner(System.in);
+		System.out.println("enter the two side");
+		int a=sc.nextInt();
+		int b=sc.nextInt();
+		System.out.println("enter the heigth of tthe trapeziium");
+		int h=sc.nextInt();
+		double area=(a+b)*h/2.0;
+		System.out.println("area of the trapezium is"+area);
+	}
+
+}
