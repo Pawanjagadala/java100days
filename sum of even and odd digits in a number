@@ -1,0 +1,28 @@
+package java100days;
+import java.util.*;
+public class sum_evenodd_digits {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc=new Scanner(System.in);
+		System.out.println("enter the number");
+		int num=sc.nextInt();
+		int even_sum=0,odd_sum=0;
+		int rem;
+		while(num!=0)
+		{
+			rem=num%10;
+			if(rem%2==0)
+			{
+				even_sum=even_sum+rem;
+				
+			}
+			else
+				odd_sum=odd_sum+rem;
+			num=num/10;
+		}
+		System.out.println("sum of the even digits is"+even_sum);
+		System.out.println("sum of the odd digits is"+odd_sum);
+		}
+
+}
