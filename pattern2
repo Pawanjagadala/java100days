@@ -1,0 +1,27 @@
+package patterns;
+
+public class patternwithoutusingabsfunction {
+
+	public static void main(String[] args) {
+		int x=1;
+		int n=4;
+		int m=1;
+		for(int i=0;i<=n;i++)
+		{
+			for(int j=n-1;j>=i;j--)
+			{
+				System.out.print(" ");
+			}
+			for(int k=1;k<=x;k++)
+			{
+				System.out.print((char)(Math.abs(k-m)+65));
+			}
+			System.out.println();
+			x=x+2;
+			m++;
+		}
+		
+
+	}
+
+}
