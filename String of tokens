@@ -1,0 +1,29 @@
+import java.util.*;
+import java.math.*;
+import java.io.*;
+import java.text.*;
+import java.util.regex.*;
+public class solution
+{
+    public static void main(String args[])
+    {
+        Scanner sc=new Scanner(System.in);
+        
+        if(!sc.hasNext())
+        {
+            System.out.println(0);
+        }
+        else
+        {
+            String s=sc.nextLine();
+        String a[]=s.trim().split("[ !,?._'@]+");
+        ArrayList<String>listofstrings=new ArrayList<String>(Arrays.asList(a));
+        System.out.println(listofstrings.size());
+        for(String str:listofstrings)
+        {
+            System.out.println(str);
+        }
+        }
+
+    }
+}
