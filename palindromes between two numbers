@@ -1,0 +1,44 @@
+package java100days;
+import java.util.*;
+public class palidromesbetween2numbers {
+	static int ispalindrome(int n)
+	{
+		int i=n;
+		int temp=n;
+		int x=0;
+		int rev=0;
+		while(i>0)
+		{
+			rev=rev*10+i%10;
+			i=i/10;
+		}
+		if(rev==temp)
+		{
+			x=1;
+		}
+		else
+		{
+			x=0;
+		}
+		return x ;
+	}
+	static void Display(int n1,int n2)
+	{
+		for(int i=n1;i<=n2;i++)
+		{
+			if(ispalindrome(i)==1)
+			{
+				System.out.print(i+" ");
+			}
+		}
+	}
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter the two numbers");
+		int n1=sc.nextInt();
+		int n2=sc.nextInt();
+		Display(n1,n2);
+	}
+
+}
