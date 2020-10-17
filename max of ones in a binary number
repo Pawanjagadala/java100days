@@ -1,0 +1,50 @@
+package java100days;
+import java.util.*;
+public class binary {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc=new Scanner(System.in);
+		System.out.println("enter the n value");
+		int n=sc.nextInt();
+		int before=0;
+		int maxcnt=0;
+		int aft=0;
+		int cnt=0;
+		int max=1;
+				int min=0;
+		int a[]=new int[n];
+		for(int i=0;i<n;i++)
+		{
+			a[i]=sc.nextInt();
+		}
+		if(a[0]==1)
+		{
+			cnt=1;
+			maxcnt=1;
+		}
+		for(int i=1;i<n;i++)
+		{
+			if(a[i]==1)
+			{
+				if(cnt==1)
+				{
+					max=max+1;
+				}
+				else
+				{
+					cnt=1;
+					if(max>min)
+					{
+						maxcnt=max;
+						max=1;
+					}
+				}
+				maxcnt=max;
+			}
+			else
+				cnt=0;
+		}
+		System.out.println(maxcnt);
+	}
+}
