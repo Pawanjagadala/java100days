@@ -1,0 +1,36 @@
+package java100days;
+import java.util.*;
+public class Twinprimenumber {
+	static boolean isprime(int n)
+	{
+		
+		boolean f=true;
+		for(int i=2;i<=n;i++)
+		{
+			if(n%2==0)
+			{
+			f=false;
+			break;
+			}
+
+		}
+		return f;
+	}
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter the two  numbers");
+		int n1=sc.nextInt();
+		int n2=sc.nextInt();
+		if(isprime(n1)==true&&isprime(n2)==true&& (n2-n1)==2)
+		{
+			System.out.println("Twin primes");
+			
+		}
+		else
+		{
+			System.out.println("Not a Twin primes");
+		}
+		}
+
+}
