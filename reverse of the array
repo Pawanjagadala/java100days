@@ -1,0 +1,40 @@
+package java100days;
+import java.util.*;
+public class arrayraverse {
+	static void reverse(int a[],int start,int end,int n)
+	{
+		int temp;
+		while(start<end)
+		{
+			temp=a[start];
+			a[start]=a[end];
+			a[end]=temp;
+			start++;
+			end--;
+		}		
+		System.out.println("reversed array is:");
+		
+		for(int i=0;i<n;i++)
+		{
+			System.out.print(a[i]+" ");
+		}
+	}
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter the number of elements");
+		int n=sc.nextInt();
+		int a[]=new int[n];
+		System.out.println("Enter the elements of the array");
+		for(int i=0;i<n;i++)
+		{
+			a[i]=sc.nextInt();
+			
+		}
+		int start=0;
+		int end=n-1;
+		reverse(a,start,end,n);
+
+	}
+
+}
