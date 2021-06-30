@@ -1,0 +1,35 @@
+package ds;
+import java.util.*;
+public class arraylistIntro {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Entre the  number od elements");
+		int n=sc.nextInt();
+		ArrayList<Integer> arr=new ArrayList<Integer>(n);
+		System.out.println("Enter the elements of the array list");
+		// Add method to add the elements to the arraylist using add() method
+		// Add will by default append the elements at the end we can also specify the index value to insert at that position
+		for(int i=0;i<n;i++)
+		{
+			arr.add(sc.nextInt());
+		}
+		arr.add(0,100);
+		System.out.println(arr);
+		// to remove the elements at the specified posiiton or else particular object from the arraylist
+		int rem=arr.remove(2);
+		System.out.println(arr);
+		// Accesing the individual elements from the arraylist and printing the values
+		for(int i=0;i<n;i++)
+		{
+			System.out.println(arr.get(i));
+		}
+		// Using the enhanced for loop to access the elements of the arraylist
+		for(int in:arr)
+		{
+			System.out.println("val is:"+in);
+		}
+	}
+
+}
