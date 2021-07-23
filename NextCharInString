@@ -1,0 +1,23 @@
+import java.io.*;
+import java.util.*;
+public class switchnext {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		//System.out.println("this is hecz");
+		Scanner sc=new Scanner(System.in);
+		System.out.println("enter the string");
+		String s=sc.next();
+		String result="";
+		String nextchar="";
+		for(int i=0;i<s.length();i++)
+		{
+			int val=s.charAt(i);
+			nextchar=String.valueOf((char)(val+1));
+			result=result+nextchar;
+			nextchar="";
+		}
+		System.out.println(result);
+	}
+
+}
