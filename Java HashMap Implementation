@@ -1,0 +1,53 @@
+package ds;
+import java.util.*;
+import java.util.Map.Entry;
+public class HashMapImplementation {
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		//By simple declarations using different datatypes for key and values 
+			/*HashMap m=new HashMap();//takes as key value pair as a object that it will take any types value
+		 m.put(1,"pawan");
+		 m.put(2,"kumar");
+		 m.put("s","jagadala");
+		 System.out.println(m);*/
+		//By using specified key and value datatype
+		HashMap<Integer,String> m=new HashMap<Integer,String>();
+		m.put(1, "pawan");
+		m.put(2, "kumar");
+		m.put(3,"jagadala");
+		System.out.println(m);
+		System.out.println(m.get(1));//To get the elements using get method 
+		m.remove(3);// To remove the elements passing key  value
+		System.out.println(m);
+		System.out.println(m.containsKey(2));// To check whether hashtable contains value associated with this key or not
+		System.out.println(m.containsValue("jagadala"));// To check whether hashtable contain specified value or not
+		System.out.println(m.keySet());// Prints the keys As a set
+		System.out.println(m.values());//returns all the values as collection
+		System.out.println(m.entrySet());// returns all the entries as a collection
+		for(Object i:m.keySet() )// Intialize the i as object means that it can hold different datatypes
+		{
+			System.out.println(i);
+		}
+		for(Object i:m.values())// same as above that it will take any datatype
+		{
+			System.out.println(i);
+		}
+		for(Object i:m.keySet())
+		{
+			System.out.println(i+m.get(i));
+		}
+		for(Map.Entry e:m.entrySet())
+		{
+			System.out.println(e.getValue()+" "+e.getKey());//Prints the each value from entry set using especially entry interface methids
+		}
+		// Using iterator for accesing each and evrry entry of hashmap
+		Set s=m.entrySet();
+		Iterator itr=s.iterator();
+		while(itr.hasNext())
+		{
+			Map.Entry entry=(Entry) itr.next();
+			System.out.println(entry.getKey()+"  "+entry.getValue());
+		}
+	}
+
+}
