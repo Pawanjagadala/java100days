@@ -1,0 +1,33 @@
+package ds;
+import java.util.*;
+public class StringReverseUsingBothRandI {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter the string:");
+		String str=sc.next();
+		int len=str.length()-1;
+		String res="";
+		for(int i=0;i<str.length();i++)
+		{
+			res=res+str.charAt(len-i);
+		}
+		System.out.println("Reversing the string using iterative approach is"+res);
+		System.out.println("Now we will see by using recursion");
+		
+		System.out.println("By using recursion we get"+stringrev(str,len));
+	}
+		static String stringrev(String str,int len)
+		{
+			
+			if(len<0)
+			{
+				return "";
+			}
+			else
+				return str.charAt(len)+stringrev(str,len-1);
+		
+	}
+
+}
