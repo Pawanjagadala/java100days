@@ -1,0 +1,23 @@
+package ds;
+import java.util.*;
+public class BasicRecursion {
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		System.out.println("Entre some number n");
+		Scanner sc=new Scanner(System.in);
+		int n=sc.nextInt();
+		recursion(n);
+	}
+	static void recursion(int n)
+	{
+		if(n<1)
+		{
+			System.out.println("n is less than one");
+		}
+		else
+		{
+			recursion(n-1);
+			System.out.println(n);
+		}
+	}
+}
